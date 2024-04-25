@@ -17,6 +17,7 @@
 		52AAEB752BD96CAD004C869D /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAEB742BD96CAD004C869D /* CountryCell.swift */; };
 		52AAEB782BD96CED004C869D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAEB772BD96CED004C869D /* CountryModel.swift */; };
 		52AAEB7A2BD96D42004C869D /* SecondScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAEB792BD96D42004C869D /* SecondScreenViewModel.swift */; };
+		52AAEB7D2BD996DA004C869D /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAEB7C2BD996DA004C869D /* MainScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		52AAEB742BD96CAD004C869D /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		52AAEB772BD96CED004C869D /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		52AAEB792BD96D42004C869D /* SecondScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewModel.swift; sourceTree = "<group>"; };
+		52AAEB7C2BD996DA004C869D /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		52AAEB7B2BD96D4C004C869D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				52AAEB7C2BD996DA004C869D /* MainScreenViewModel.swift */,
 				52AAEB792BD96D42004C869D /* SecondScreenViewModel.swift */,
 			);
 			path = ViewModel;
@@ -186,6 +189,7 @@
 				52AAEB782BD96CED004C869D /* CountryModel.swift in Sources */,
 				52AAEB572BD96B09004C869D /* AppDelegate.swift in Sources */,
 				52AAEB592BD96B09004C869D /* SceneDelegate.swift in Sources */,
+				52AAEB7D2BD996DA004C869D /* MainScreenViewModel.swift in Sources */,
 				52AAEB722BD96C73004C869D /* NetworkService.swift in Sources */,
 				52AAEB6E2BD96C28004C869D /* SecondScreen.swift in Sources */,
 				52AAEB752BD96CAD004C869D /* CountryCell.swift in Sources */,

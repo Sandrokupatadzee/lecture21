@@ -21,7 +21,7 @@ class CountryCell: UITableViewCell {
     
     private let contryName: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .systemBackground
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label

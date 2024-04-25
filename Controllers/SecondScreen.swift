@@ -73,8 +73,8 @@ class SecondScreen: UIViewController {
         return label
     }()
     
-    //    MARK: Stackview and Buttons
-    
+    // MARK: - Stackview and Buttons
+
     private let labelsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -135,7 +135,7 @@ class SecondScreen: UIViewController {
     }()
     
     
-    //    MARK: initialisation
+    //    MARK: - initialisation
     
     init(_ viewModel: SecondScreenViewModel) {
         self.viewModel = viewModel
