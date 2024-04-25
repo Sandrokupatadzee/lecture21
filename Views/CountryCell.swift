@@ -21,7 +21,7 @@ class CountryCell: UITableViewCell {
     
     private let contryName: UILabel = {
         let label = UILabel()
-        label.textColor = .systemBackground
+        label.textColor = .label
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
@@ -53,20 +53,17 @@ class CountryCell: UITableViewCell {
         guard let imageUrl = URL(string: country.flags.png) else {
             return
         }
-        
         URLSession.shared.dataTask(with: imageUrl) { [weak self] (data, response, error) in
             guard let self = self, let data = data, let image = UIImage(data: data), error == nil else {
                 return
             }
-            
             DispatchQueue.main.async {
                 self.countryFlag.image = image
             }
         }.resume()
-        
     }
     
-//    MARK: Functions
+//    MARK: - Functions
     
     private func setupUI() {
         addSubview(countryFlag)
@@ -76,9 +73,8 @@ class CountryCell: UITableViewCell {
         countryFlag.translatesAutoresizingMaskIntoConstraints = false
         contryName.translatesAutoresizingMaskIntoConstraints = false
         actoinImage.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
-            
             
             countryFlag.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             countryFlag.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
@@ -97,7 +93,6 @@ class CountryCell: UITableViewCell {
     
     private func attributedText(for text: String) -> NSAttributedString {
             let strokeTextAttributes: [NSAttributedString.Key: Any] = [
-                .foregroundColor: UIColor.black,
                 .font: UIFont.boldSystemFont(ofSize: 18)
             ]
             return NSAttributedString(string: text, attributes: strokeTextAttributes)

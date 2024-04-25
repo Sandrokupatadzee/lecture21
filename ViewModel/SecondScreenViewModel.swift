@@ -61,7 +61,7 @@ class SecondScreenViewModel {
     
     private func makeLabel(text: String) -> UILabel {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.text = text
         return label
@@ -69,7 +69,7 @@ class SecondScreenViewModel {
     
     private func makeContentLabel(text: String) -> UILabel {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.text = text
         return label

@@ -11,7 +11,7 @@ import UIKit
 class MainScreenViewModel {
     
     var onCountryUpdated: (() -> Void) = {}
-//    var onErrorMessage: (() -> Void) = {}
+    var onErrorMessage: (() -> Void) = {}
 
     var AllCountries: [Country] = [] {
         didSet {

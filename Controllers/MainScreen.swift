@@ -20,6 +20,7 @@ class MainScreen: UIViewController {
     private let tableView: UITableView = {
         let screenTableView = UITableView()
         screenTableView.register(CountryCell.self, forCellReuseIdentifier: CountryCell.identifier)
+        screenTableView.backgroundColor = .clear
         return screenTableView
     }()
     
@@ -49,7 +50,7 @@ class MainScreen: UIViewController {
     }
     
     func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .secondarySystemBackground
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -69,7 +70,6 @@ class MainScreen: UIViewController {
         definesPresentationContext = true
     }
 }
-
 // MARK: - TableView and SearchController Extensions
 
 extension MainScreen: UITableViewDelegate, UITableViewDataSource {
@@ -87,14 +87,10 @@ extension MainScreen: UITableViewDelegate, UITableViewDataSource {
         }
         let country = viewModel.isSearchModeON(searchController: searchController) ? viewModel.filteredCountries[indexPath.section] : viewModel.AllCountries[indexPath.section]
         cell.configure(with: country)
-//        cell.backgroundColor = .systemBackground
-        if UIScreen.main.traitCollection.userInterfaceStyle == .dark {
-            cell.backgroundColor = .lightGray // Use light gray background color in dark mode
-        } else {
-            cell.backgroundColor = .clear // Use clear background color in light mode
-        }
+        cell.backgroundColor = .tertiarySystemBackground
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 18
+        cell.layer.borderColor = UIColor.secondaryLabel.cgColor
         cell.clipsToBounds = true
         return cell
     }
@@ -109,14 +105,6 @@ extension MainScreen: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        
-//        if self.traitCollection.userInterfaceStyle == .dark {
-//            headerView.backgroundColor = UIColor.black.withAlphaComponent(0.95) // Semi-transparent black background for dark mode
-//        } else {
-//            headerView.backgroundColor = UIColor.clear // Transparent background for light mode
-//        }
-        
         return headerView
     }
     

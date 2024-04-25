@@ -30,6 +30,7 @@ class SecondScreen: UIViewController {
         uiView.layer.shadowOpacity = 0.5
         uiView.layer.shadowOffset = CGSize(width: 0, height: 5)
         uiView.layer.masksToBounds = false
+        uiView.backgroundColor = .tertiarySystemBackground
         return uiView
     }()
     
@@ -43,7 +44,7 @@ class SecondScreen: UIViewController {
     
     private let flagTitle: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.text = "About the flag:"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
@@ -51,7 +52,7 @@ class SecondScreen: UIViewController {
     
     private let flagDescription: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.numberOfLines = 10
         return label
@@ -67,7 +68,7 @@ class SecondScreen: UIViewController {
     
     private let infoTitle: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.text = "Basic informaion:"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
@@ -110,7 +111,7 @@ class SecondScreen: UIViewController {
     
     private let linkTitle: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.text = "Useful links:"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
@@ -157,7 +158,7 @@ class SecondScreen: UIViewController {
     }
     
     private func setupScrollView() {
-        
+        self.view.backgroundColor = .secondarySystemBackground
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
         self.contentView.addSubview(countryFlagContainerView)
@@ -281,5 +282,4 @@ class SecondScreen: UIViewController {
             contentStackView.addArrangedSubview(content[element])
         }
     }
-    
 }
